@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="appShell">
+        <header class="hero">
+            <p class="eyebrow">Live Conditions</p>
+            <h1>Aura Weather</h1>
+            <p class="subtitle">A clean, real-time weather view for any city worldwide.</p>
+        </header>
+
+        <form class="weatherForm" aria-label="Search weather by city">
+            <label for="city" class="srOnly">City</label>
+            <input id="city" type="text" class="cityInput" placeholder="Search a city (e.g. Tokyo)" autocomplete="off">
+            <button type="submit" class="primaryBtn">Get Weather</button>
+        </form>
+
+        <section class="card" aria-live="polite" style="display: none;">
+            <div class="cardTop">
+                <p class="cityDisplay"></p>
+                <p class="dateDisplay"></p>
+            </div>
+
+            <div class="mainStat">
+                <p class="weatherEmoji"></p>
+                <p class="tempDisplay"></p>
+            </div>
+
+            <p class="descriptionDisplay"></p>
+
+            <div class="metricsGrid">
+                <p class="metric humidityDisplay"></p>
+                <p class="metric feelsLikeDisplay"></p>
+                <p class="metric windDisplay"></p>
+                <p class="metric pressureDisplay"></p>
+            </div>
+        </section>
+
+        <p class="statusMessage" role="status"></p>
+    </main>
+
+    <div class="bgDecor" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

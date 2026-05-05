@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm run build || true",
+  "outputDirectory": ".",
+  "env": {
+    "OPENWEATHER_API_KEY": "@openweather_api_key"
+  }
+}

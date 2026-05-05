@@ -1,0 +1,9 @@
+{
+  "name": "weather-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Modern weather app with Vercel serverless backend",
+  "scripts": {
+    "dev": "python -m http.server 8000"
+  }
+}
