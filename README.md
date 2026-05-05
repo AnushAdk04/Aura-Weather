@@ -11,7 +11,7 @@ A modern, clean weather app with a refreshed UI and serverless backend API for s
 OPENWEATHER_API_KEY=YOUR_REAL_OPENWEATHER_API_KEY
 ```
 
-3. Run a local server to test (e.g., `python -m http.server 8000` or VS Code Live Server).
+3. Run a local server to test (e.g. VS Code Live Server).
 4. The frontend calls `/api/weather` which your local setup won't have yet, so for pure local testing without Vercel, use a direct API call temporarily.
 
 ## Deployment to Vercel (Recommended)
@@ -33,11 +33,12 @@ This setup is designed for Vercel serverless functions, which keep your API key 
 4. Connect to Vercel:
    - Go to [vercel.com](https://vercel.com)
    - Import your GitHub repo
-5. Add environment variable in Vercel dashboard:
+5. Add environment variable in Vercel dashboard (Project Settings -> Environment Variables):
    - **Name:** `OPENWEATHER_API_KEY`
    - **Value:** Your real OpenWeather API key
-6. Deploy—Vercel will automatically detect `/api/weather.js` and run it serverless.
-7. Your frontend calls `/api/weather` which now runs on the server; the key is never exposed to browsers.
+6. Redeploy to Production from the latest commit after adding the variable.
+7. Vercel will detect `/api/weather.js` and run it serverless.
+8. Your frontend calls `/api/weather` which now runs on the server; the key is never exposed to browsers.
 
 ## Security
 
